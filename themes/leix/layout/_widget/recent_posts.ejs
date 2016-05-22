@@ -1,6 +1,6 @@
 <% if (site.posts.length){ %>
 <div class="widget tag">
-  <h3 class="title"><%= __('recent_posts') %><a href="/archives" class="more-link">More...</a></h3>
+  <h3 class="title"><i class="fa fa-files-o" aria-hidden="true"></i>     <%= __('recent_posts') %><a href="/archives" class="more-link">More...</a></h3>
   <ul class="entry">
     <% site.posts.sort('date', -1).limit(10).each(function(post){ %>
       <li>
