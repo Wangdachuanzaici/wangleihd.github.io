@@ -1,36 +1,59 @@
-# Header
 menu:
   Home: /
-  Archives: /archives
-rss: /atom.xml
+#  About: /about
+  Archive: /archives
+  RSS: /atom.xml
 
-# Content
-excerpt_link: Read More
+widgets:
+- search
+#- about_me
+- calendar
+- category
+- tagcloud
+- recent_posts
+- links
+#- duoshuo_recent_comments
+
+highlightjs: monokai_sublime
+
+excerpt_link: Read More...
+
+#twitter_id: wileam
+facebook_id: RitterWang
+github_id: wangleihd
+
+addthis:
+ # enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
 fancybox: true
 
-# Sidebar
-sidebar: right
-widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
+google_analytics: UA-41676519-1
+rss: /atom.xml
 
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
-# - category
-# - tagcloud
-# - archive
+links:
+#- name: Life Blog
+#  link: http://blog.wileam.com
+#- name: popotang
+#  link: http://popotang.com/
+#- name: Jim-Liu's blog
+#  link: http://jimliu.net/
+#- name: icyleaf's blog
+#  link: http://icyleaf.com/
+- name: twinsant
+  link: http://twinsant.com/
 
-# widget behavior
-archive_type: 'monthly'
-show_count: false
+#duoshuo: wileamcode
 
-# Miscellaneous
-google_analytics:
-favicon: /favicon.png
-twitter:
-google_plus:
-fb_admins:
-fb_app_id:
+about_me:
+  title: ABOUT ME
+  avatar: /uploads/avatar.jpg
+  texts:
+  - <a href="/about" target="_BLANK">Joanna Wu(wileam)</a>
+  - Smile, breathe & go slowly. ^_^
+  - <br>
+  - <img src="/uploads/email.gif">

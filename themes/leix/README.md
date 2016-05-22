@@ -1,111 +1,139 @@
-# Landscape
+# Light-JimLiu
 
-A brand new default theme for [Hexo].
+Hexo主题Light的修改版
 
-- [Preview](http://hexo.io/hexo-theme-landscape/)
+**DEMO** @ [Jim Liu's Blog](http://blog.jimliu.net)
 
-## Installation
+## 增加功能：
 
-### Install
+* 多说评论框——在`_config.yml`的`duoshuo`填写多说标识，或修改`_partial/duoshuo.ejs`
+* 多说最新评论模块——`duoshuo_recent_comments`
+* ABOUT ME模块——修改`_config.yml`中的about_me段落，或修改`_widget/about_me.ejs`
+* Links模块——修改`_config.yml`中的`links`段落
+* 百度统计——在`_partial/baidu_stats.ejs`中放入你的百度统计代码
 
-``` bash
-$ git clone https://github.com/hexojs/hexo-theme-landscape.git themes/landscape
+## 默认去掉：
+
+* twitter
+* addthis
+
+## 其他：
+
+* 按中文习惯调整了一些字体
+* 调整了引用块和代码块的样式细节
+* 调整了文章中粗体字的颜色
+
+# Light
+
+Default theme for [Hexo].
+
+## Install
+
+Execute the following command and modify `theme` in `_config.yml` to `light`.
+
+```
+git clone git://github.com/tommy351/hexo-theme-light.git themes/light
 ```
 
-**Landscape requires Hexo 2.4 and above.**
+## Update
 
-### Enable
+Execute the following command to update Light.
 
-Modify `theme` setting in `_config.yml` to `landscape`.
-
-### Update
-
-``` bash
-cd themes/landscape
+```
+cd themes/light
 git pull
 ```
 
-## Configuration
+## Config
 
-``` yml
-# Header
+Default config:
+
+``` yaml
 menu:
   Home: /
   Archives: /archives
-rss: /atom.xml
 
-# Content
-excerpt_link: Read More
-fancybox: true
-
-# Sidebar
-sidebar: right
 widgets:
+- search
 - category
 - tag
-- tagcloud
-- archives
-- recent_posts
+- twitter
 
-# Miscellaneous
-google_analytics:
-favicon: /favicon.png
+excerpt_link: Read More
+
 twitter:
-google_plus:
+  username:
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+google_analytics:
+rss:
 ```
 
-- **menu** - Navigation menu
-- **rss** - RSS link
-- **excerpt_link** - "Read More" link at the bottom of excerpted articles. `false` to hide the link.
+- **menu** - Main navigation menu
+- **widget** - Widgets displaying in sidebar
+- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
+- **twitter** - Twitter widget config
+  - **username** - Twitter username
+  - **show_replies** - Enable displaying replies
+  - **tweet_count** - Tweets display in widget
+- **addthis** - Share buttons at the buttom of articles (Powered by [AddThis])
+  - **enable** - Enable share buttons
+  - **pubid** - Profile ID of [AddThis]
+  - **facebook** - Enable Facebook button
+  - **twitter** - Enable Twitter button
+  - **google** - Enable Google+ button
+  - **pinterest** - Enable Pinterest button
 - **fancybox** - Enable [Fancybox]
-- **sidebar** - Sidebar style. You can choose `left`, `right`, `bottom` or `false`.
-- **widgets** - Widgets displaying in sidebar
 - **google_analytics** - Google Analytics ID
-- **favicon** - Favicon path
-- **twitter** - Twiiter ID
-- **google_plus** - Google+ ID
+- **rss** - RSS subscription link (change if using Feedburner)
 
 ## Features
 
+### Gallery Post
+
+![](http://i.minus.com/ibp6Hbytwgof9y.jpg)
+
+```
+---
+layout: photo
+title: Gallery Post
+photos:
+- http://i.minus.com/ibobbTlfxZgITW.jpg
+- http://i.minus.com/iedpg90Y0exFS.jpg
+---
+```
+
+### Link Post
+
+![](http://i.minus.com/i7hBbGqh14EWo.png)
+
+```
+---
+layout: link
+title: Link Post
+link: http://www.google.com/
+---
+```
+
+### Tweet Widget
+
+![](http://i.minus.com/iMC8EyF9y0Y3y.PNG)
+
 ### Fancybox
 
-Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
-
-```
-![img caption](img url)
-
-{% fancybox img_url [img_thumbnail] [img_caption] %}
-```
-
-### Sidebar
-
-You can put your sidebar in left side, right side or bottom of your site by editing `sidebar` setting.
-
-Landscape provides 5 built-in widgets:
-
-- category
-- tag
-- tagcloud
-- archives
-- recent_posts
-
-All of them are enabled by default. You can edit them in `widget` setting.
-
-## Development
-
-### Requirements
-
-- [Grunt] 0.4+
-- Hexo 2.4+
-
-### Grunt tasks
-
-- **default** - Download [Fancybox] and [Font Awesome].
-- **fontawesome** - Only download [Font Awesome].
-- **fancybox** - Only download [Fancybox].
-- **clean** - Clean temporarily files and downloaded files.
+![](http://i.minus.com/iHv7h7rZNqHvo.PNG)
 
 [Hexo]: http://zespia.tw/hexo/
+[AddThis]: https://www.addthis.com
 [Fancybox]: http://fancyapps.com/fancybox/
-[Font Awesome]: http://fontawesome.io/
-[Grunt]: http://gruntjs.com/
