@@ -14,7 +14,8 @@ widgets:
 - links
 #- duoshuo_recent_comments
 
-highlightjs: monokai_sublime
+#highlightjs: monokai_sublime
+highlightjs: github
 
 excerpt_link: Read More...
 
