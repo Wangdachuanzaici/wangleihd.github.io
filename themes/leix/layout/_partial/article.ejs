@@ -6,9 +6,10 @@
     <header>
       <% if (item.layout != 'page'){ %>
         <div class="art_icon"><i class="fa fa-file-text-o fa-3x" aria-hidden="true"></i></div>
-        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
       <% } %>
       <%- partial('post/title') %>
+      <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+
     </header>
     <div class="entry">
       <% if (item.excerpt && index){ %>
